@@ -11,6 +11,12 @@
       content="width=device-width, initial-scale=1, minimum-scale=1"
     />
 
+    <meta content="http://kushtimusprime.github.io/assets/self_portrait.jpg" property="og:image" />
+    <meta content="http://kushtimusprime.github.io/assets/self_portrait.jpg" property="twitter:image" /> 
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" /> 
+
     <!-- Webfont. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -446,7 +452,7 @@
             li.innerHTML = `
               ${
                 paper.previewSrc.endsWith(".mp4")
-                  ? `<video class="paper-visual" src="${paper.previewSrc}" loop muted autoplay playsinline></video>`
+                  ? `<video class="paper-visual" src="${paper.previewSrc}" loop muted autoplay playsinline preload="auto" webkit-playsinline></video>`
                   : `<img class="paper-visual" src="${paper.previewSrc}" alt="${paper.title}">`
               }
               <div class="paper-textual">
