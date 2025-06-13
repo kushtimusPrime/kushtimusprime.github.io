@@ -95,11 +95,16 @@ p {
 #paper-list li .paper-visual {
   width: 13em;
   height: 9.5em;
-  object-fit: cover;
+  object-fit: contain;
   overflow: hidden;
   display: block;
   border-radius: 1px;
   border-radius: 0.2em;
+}
+
+#paper-list li video.paper-visual {
+  object-fit: cover;
+  height: 7.3em;
 }
 #paper-list li .paper-visual * {
   display: none;

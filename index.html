@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Chung Min Kim</title>
+    <title>Kush Hari</title>
 
     <!-- Usual metadata. -->
     <meta charset="UTF-8" />
-    <link href="./assets/sunset_small.jpeg" rel="shortcut icon" type="image/x-icon" />
+    <link href="./assets/autobot-logo.png" rel="shortcut icon" type="image/x-icon" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1"
@@ -38,28 +38,22 @@
       "
     >
       <div style="flex-grow: 1; flex-basis: 20em">
-        <h1>Chung Min Kim</h1>
+        <h1>Kush Hari</h1>
         <p>
-            I am a third-year PhD student in at <a href="https://www.berkeley.edu/">UC Berkeley</a>, where I am advised by <a href="https://goldberg.berkeley.edu/">Ken Goldberg</a> and <a href="https://people.eecs.berkeley.edu/~kanazawa/">Angjoo Kanazawa</a>. I received my dual B.S. degree in EECS (Electrical Engineering and Computer Science) and Mechanical Engineering from <a href="https://www.berkeley.edu/">UC Berkeley</a> in 2021.
-            I am currently funded by the <a href="http://www.nsfgrfp.org/">NSF GRFP</a>. 🐻
+            I am a second-year PhD student at <a href="https://www.berkeley.edu/">UC Berkeley</a>, where I am advised by <a href="https://goldberg.berkeley.edu/">Ken Goldberg</a>. I received my bachelor's degree in Biomedical Engineering and Electrical Engineering from <a href="https://www.vanderbilt.edu/">Vanderbilt</a> in 2023 where I worked with <a href="https://engineering.vanderbilt.edu/bio/?pid=michael-miga">Michael Miga</a> on augmented reality for neurosurgical planning.
+            I am currently funded by the <a href="http://www.nsfgrfp.org/">NSF GRFP</a>.
         </p>
         <p>
-          This summer I'm working with <a href="https://www.lerrelpinto.com/">Lerrel Pinto</a> at <a
-            href="https://cs.nyu.edu/home/index.html">NYU</a> as a visiting student!
+          I am excited about surgical robotics for minimally invasive surgery and how recent advances in 3D vision, policy learning, and cloud robotics can improve patient care.
         </p>
         <p>
-            I am working on 3D vision and robotics in the "real-world".
-        </p>
-        <p>
-          <a href="mailto:chungmin99@berkeley.edu">Email</a>
+          <a href="mailto:kush_hari@berkeley.edu">Email</a>
           &nbsp;/&nbsp;
-          <a href="https://scholar.google.com/citations?hl=en&user=ODr5lMgAAAAJ">Google Scholar</a>
+          <a href="https://scholar.google.com/citations?user=qeOl9rMAAAAJ&hl=en&oi=ao">Google Scholar</a>
           &nbsp;/&nbsp;
-          <a href="https://twitter.com/ChungMinKim">Twitter</a>
+          <a href="https://www.x.com/KushtimusPrime">Twitter</a>
           &nbsp;/&nbsp;
-          <a href="https://github.com/chungmin99/">Github</a>
-          &nbsp;/&nbsp;
-          <a href="https://docs.google.com/document/d/12cRPLdpT7ES6IHeIp3JFJsJS0lUze8yHy-9sTsCD8AU">Resume</a>
+          <a href="https://github.com/kushtimusPrime/">Github</a>
         </p>
       </div>
       <div style="display: block">
@@ -79,8 +73,6 @@
     <section>
       <h2>Research</h2>
 
-      <p>⚙️ Under construction ⚙️</p>
-
       <!-- Paper list will be dynamically generated here -->
       <ul id="paper-list" style="margin-top: 1em" data-show-recent="false"></ul>
       [ <a href="#" onclick="toggleRecentPapers(event)">Show older papers</a> ]
@@ -88,180 +80,357 @@
       <!-- Generate paper list. -->
       <script>
         const papers = [
-          {
-            previewSrc: "./assets/pyroki.mp4",
+        {
+            previewSrc: "./assets/eye_robot.mp4",
             title:
-              "PyRoki: A Modular Toolkit for Robot Kinematic Optimization",
+              "Eye, Robot: Learning to Look to Act with a BC-RL Perception-Action Loop",
             authors: [
-              "Chung Min Kim*",
-              "Brent Yi*",
-              "Hongsuk Choi",
-              "Yi Ma",
-              "Ken Goldberg",
-              "Angjoo Kanazawa",
-            ],
-            conference: "Arxiv 2025",
-            links: [
-              { text: "Website", url: "https://pyroki-toolkit.github.io/" },
-              { text: "Paper", url: "https://arxiv.org/abs/2505.03728" },
-            ],
-            summary:
-              "Modular, extensible, and cross-platform toolkit for kinematic optimization. Also, see <a href='https://www.videomimic.net/'>VideoMimic</a>!",
-            highlighted: true,
-            recent: true,
-            new: true,
-          },
-          {
-            previewSrc: "./assets/rsrd_preview.mp4",
-            title:
-              "Robot See Robot Do: Imitating Articulated Object Manipulation with Monocular 4D Reconstruction",
-            authors: [
-              "Justin Kerr*",
-              "Chung Min Kim*",
-              "Mingxuan Wu",
+              "Justin Kerr",
+              "Kush Hari",
+              "Ethan Weber",
+              "Chung Min Kim",
               "Brent Yi",
-              "Qianqian Wang",
+              "Tyler Bonnen",
               "Ken Goldberg",
               "Angjoo Kanazawa",
             ],
-            conference: "CoRL 2024, Oral",
+            conference: "arXiv 2025",
             links: [
-              { text: "Website", url: "https://robot-see-robot-do.github.io/" },
-              { text: "Paper", url: "https://arxiv.org/abs/2409.18121" },
+              { text: "Website", url: "https://www.eyerobot.net/" },
+              { text: "Paper", url: "https://www.eyerobot.net/data/EyeRobot-final.pdf" },
             ],
             summary:
-              "Feature fields can help reconstruct, track, and retarget object motion.",
+              "Robot learning with a mechanical eyeball, where eye policy is trained via RL and arm policy is trained via BC",
+            highlighted: false,
+            recent: true,
+            new: false,
+        },
+        
+        {
+            previewSrc: "./assets/pogs.mp4",
+            title:
+              "Persistent Object Gaussian Splat (POGS) for Tracking Human and Robot Manipulation of Irregularly Shaped Objects",
+            authors: [
+              "Justin Yu*",
+              "Kush Hari*",
+              "Karim El-Refai*",
+              "Arnav Dalal",
+              "Justin Kerr",
+              "Chung Min Kim",
+              "Richard Cheng",
+              "Muhammad Zubair Irshad",
+              "Ken Goldberg",
+            ],
+            conference: "International Conference on Robotics and Automation (ICRA) 2025",
+            links: [
+              { text: "Website", url: "https://berkeleyautomation.github.io/POGS/" },
+              { text: "Paper", url: "https://arxiv.org/abs/2503.05189" },
+            ],
+            summary:
+              "Updating feature fields online to track and manipulate moving objects",
             highlighted: false,
             recent: true,
             new: false,
           },
-          {
-            previewSrc: "./assets/garfield_splash.mp4",
-            title: "GARField: Group Anything with Radiance Fields",
-            authors: [
-              "Chung Min Kim*",
-              "Mingxuan Wu*",
-              "Justin Kerr*",
-              "Ken Goldberg",
-              "Matthew Tancik",
-              "Angjoo Kanazawa",
-            ],
-            conference: "CVPR 2024",
-            links: [
-              { text: "Website", url: "https://www.garfield.studio" },
-              { text: "Paper", url: "https://arxiv.org/abs/2401.09419" },
-            ],
-            summary:
-              "Hierarchical grouping in 3D by training a scale-conditioned affinity field.",
-            recent: true,
-            new: false,
-          },
-          {
-            previewSrc: "./assets/lerftogo_splash.mp4",
-            title: "LERF-TOGO: Language Embedded Radiance Fields for Zero-Shot Task-Oriented Grasping",
-            authors: [
-              "Adam Rashid*",
-              "Satvik Sharma*",
-              "Chung Min Kim",
-              "Justin Kerr",
-              "Lawrence Yunliang Chen",
-              "Angjoo Kanazawa",
-              "Ken Goldberg",
-            ],
-            conference: "CoRL 2023, Oral, Best Paper Finalist",
-            links: [
-              { text: "Website", url: "https://lerftogo.github.io/" },
-              { text: "Paper", url: "https://arxiv.org/abs/2309.07970" },
-            ],
-            summary: "Zero-shot language-conditioned part grasping using LERF.",
-            recent: true,
-            new: false,
-          },
-          {
-            previewSrc: "./assets/lerf_splash.mp4",
-            title: "LERF: Language Embedded Radiance Fields",
-            authors: [
-              "Justin Kerr*",
-              "Chung Min Kim*",
-              "Ken Goldberg",
-              "Angjoo Kanazawa",
-              "Matthew Tancik",
-            ],
-            conference: "ICCV 2023, Oral",
-            links: [
-              { text: "Website", url: "https://lerf.io" },
-              { text: "Paper", url: "https://arxiv.org/abs/2303.09553" },
-            ],
-            summary:
-              "Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries in 3D.",
-            recent: true,
-            new: false,
-          },
-          {
-            previewSrc: "./assets/staxray.png",
-            title: "Mechanical Search on Shelves with Efficient Stacking and Destacking of Objects",
-            authors: [
-              "Letian Fu*",
-              "Huang Huang*",
-              "Michael Danielczuk",
-              "Chung Min Kim",
-              "Zachary Tam",
-              "Jeffrey Ichnowski",
-              "Anelia Angelova",
-              "Brian Ichter",
-              "Ken Goldberg",
-            ],
-            conference: "ISRR 2022",
-            links: [
-              { text: "arXiv", url: "https://arxiv.org/abs/2207.02347" },
-              { text: "Website", url: "https://sites.google.com/berkeley.edu/stax-ray" },
-            ],
-            summary: "Active shelf re-organization to perform search in cluttered environments.",
-            recent: false,
-            new: false,
-          },
-          {
-            previewSrc: "./assets/slaxray.jpg",
-            title: "Mechanical Search on Shelves using a Novel “Bluction” Tool",
-            authors: [
-              "Huang Huang",
-              "Michael Danielczuk",
-              "Chung Min Kim",
-              "Letian Fu",
-              "Zachary Tam",
-              "Jeffrey Ichnowski",
-              "Anelia Angelova",
-              "Brian Ichter",
-              "Ken Goldberg",
-            ],
-            conference: "ICRA 2022",
-            links: [
-              { text: "IEEE", url: "https://ieeexplore.ieee.org/document/9811622" },
-              { text: "arXiv", url: "https://arxiv.org/abs/2201.08968" },
-            ],
-            summary: "Pushing and suction actions are combined into a single tool for searching in shelf environments.",
-            recent: false,
-            new: false,
-          },
-          {
-            previewSrc: "./assets/ipc-splash.jpg",
-            title:
-              "IPC-GraspSim: Reducing the Sim2Real Gap for Parallel-Jaw Grasping with the Incremental Potential Contact Model",
-            authors: [
-              "Chung Min Kim",
-              "Michael Danielczuk",
-              "Isabella Huang",
-              "Ken Goldberg",
-            ],
-            conference: "ICRA 2022",
-            links: [
-              { text: "Website", url: "https://sites.google.com/berkeley.edu/ipcgraspsim" },
-              { text: "arXiv", url: "https://arxiv.org/abs/2111.01391" },
-            ],
-            summary: "Simulate compliance in parallel-jaw gripper tips for better grasp success prediction.",
-            recent: false,
-            new: false,
-          },
+        {
+          previewSrc: "./assets/robo_dm.jpg",
+          title:
+            "Robo-DM: Data Management For Large Robot Datasets",
+          authors: [
+            "Kaiyuan Chen",
+            "Letian Fu",
+            "David Huang",
+            "Yanxiang Zhang",
+            "Lawrence Yunliang Chen",
+            "Huang Huang",
+            "Kush Hari",
+            "Ashwin Balakrishna",
+            "Ted Xiao",
+            "Pannag R Sanketi",
+            "John Kubiatowicz",
+            "Ken Goldberg",
+          ],
+          conference: "International Conference on Robotics and Automation (ICRA) 2025, <span style='color: red;'>Best Robot Learning Paper</span>",
+          links: [
+            { text: "Paper", url: "https://arxiv.org/abs/2505.15558" },
+            { text: "Code", url: "https://github.com/BerkeleyAutomation/robodm" },
+          ],
+          summary:
+            "Data management toolkit for collecting, sharing, and learning from large robot datasets",
+          highlighted: false,
+          recent: true,
+          new: false,
+        },
+        {
+          previewSrc: "./assets/sufia_bc.mp4",
+          title:
+            "SuFIA-BC: Generating High Quality Demonstration Data for Visuomotor Policy Learning in Surgical Subtasks",
+          authors: [
+            "Masoud Moghani",
+            "Nigel Nelson",
+            "Mohamed Ghanem",
+            "Andres Diaz-Pinto",
+            "Kush Hari",
+            "Mahdi Azizian",
+            "Ken Goldberg",
+            "Sean Huver",
+            "Animesh Garg",
+          ],
+          conference: "International Conference on Robotics and Automation (ICRA) 2025",
+          links: [
+            { text: "Website", url: "https://orbit-surgical.github.io/sufia-bc/" },
+            { text: "Paper", url: "https://arxiv.org/abs/2504.14857" },
+          ],
+          summary:
+            "Surgical simulation environment with photorealistic organs for visual behavior cloning",
+          highlighted: false,
+          recent: true,
+          new: false,
+        },
+        {
+          previewSrc: "./assets/legs.mp4",
+          title:
+            "Language-Embedded Gaussian Splats (LEGS): Incrementally Building Room-Scale Representations with a Mobile Robot",
+          authors: [
+            "Justin Yu*",
+            "Kush Hari*",
+            "Kishore Srinivas*",
+            "Karim El-Refai",
+            "Adam Rashid",
+            "Chung Min Kim",
+            "Justin Kerr",
+            "Richard Cheng",
+            "Muhammad Zubair Irshad",
+            "Ashwin Balakrishna",
+            "Thomas Kollar",
+            "Ken Goldberg",
+          ],
+          conference: "International Conference on Intelligent Robots and Systems (IROS) 2024",
+          links: [
+            { text: "Website", url: "https://berkeleyautomation.github.io/LEGS/" },
+            { text: "Paper", url: "https://arxiv.org/abs/2409.18108" },
+          ],
+          summary:
+            "Embed CLIP features into Gaussian Splat online as robot traverses room-scale environments",
+          highlighted: false,
+          recent: true,
+          new: false,
+        },
+        {
+          previewSrc: "./assets/fogros2_ft.jpg",
+          title:
+            "FogROS2-FT: Fault Tolerant Cloud Robotics",
+          authors: [
+            "Kaiyuan Chen",
+            "Kush Hari",
+            "Trinity Chung",
+            "Michael Wang",
+            "Nan Tian",
+            "Christian Juette",
+            "Jeffrey Ichnowski",
+            "Liu Ren",
+            "John Kubiatowicz",
+            "Ion Stoica",
+            "Ken Goldberg",
+          ],
+          conference: "International Conference on Intelligent Robots and Systems (IROS) 2024, <span style='color: red;'>Best Paper Finalist (Top 0.1%)</span>",
+          links: [
+            { text: "Website", url: "https://sites.google.com/view/fogros2-ft" },
+            { text: "Paper", url: "https://arxiv.org/abs/2412.05408" },
+          ],
+          summary:
+            "Cloud robotics framework that deploys processes to multiple low-cost cloud instances",
+          highlighted: false,
+          recent: true,
+          new: false,
+        },
+        {
+          previewSrc: "./assets/mirage.mp4",
+          title:
+            "Mirage: Cross-embodiment zero-shot policy transfer with cross-painting",
+          authors: [
+            "Lawrence Yunliang Chen*",
+            "Kush Hari*",
+            "Karthik Dharmarajan*",
+            "Chenfeng Xu",
+            "Quan Vuong",
+            "Ken Goldberg",
+          ],
+          conference: "Robotics Science and Systems (RSS) 2024",
+          links: [
+            { text: "Website", url: "https://robot-mirage.github.io/" },
+            { text: "Paper", url: "https://arxiv.org/abs/2402.19249" },
+          ],
+          summary:
+            "Zero-shot transfer of visuomotor policies across robot embodiments using cross-painted images",
+          highlighted: false,
+          recent: true,
+          new: false,
+        },
+        {
+          previewSrc: "./assets/stitch.mp4",
+          title:
+            "STITCH: Augmented dexterity for suture throws including thread coordination and handoffs",
+          authors: [
+            "Kush Hari*",
+            "Hansoul Kim*",
+            "Will Panitch*",
+            "Kishore Srinivas",
+            "Vincent Schorp",
+            "Karthik Dharmarajan",
+            "Shreya Ganti",
+            "Tara Sadjadpour",
+            "Ken Goldberg",
+          ],
+          conference: "International Symposium on Medical Robotics (ISMR) 2024, <span style='color: red;'>Best Paper Runner Up (Top 4%)</span>",
+          links: [
+            { text: "Website", url: "https://sites.google.com/berkeley.edu/stitch" },
+            { text: "Paper", url: "https://arxiv.org/abs/2404.05151" },
+          ],
+          summary:
+            "Autonomous suturing with the da Vinci robot",
+          highlighted: false,
+          recent: true,
+          new: false,
+        },
+        {
+          previewSrc: "./assets/orbit_surgical.mp4",
+          title:
+            "ORBIT-Surgical: An open-simulation framework for learning surgical augmented dexterity",
+          authors: [
+            "Qinxi Yu*",
+            "Masoud Moghani*",
+            "Karthik Dharmarajan",
+            "Vincent Schorp",
+            "William Chung-Ho Panitch",
+            "Jingzhou Liu",
+            "Kush Hari",
+            "Huang Huang",
+            "Mayank Mittal",
+            "Ken Goldberg",
+            "Animesh Garg",
+          ],
+          conference: "International Conference on Robotics and Automation (ICRA) 2024",
+          links: [
+            { text: "Website", url: "https://orbit-surgical.github.io/" },
+            { text: "Paper", url: "https://arxiv.org/abs/2404.16027" },
+          ],
+          summary:
+            "Physics-based surgical robot simulation framework with NVIDIA Isaac Sim",
+          highlighted: false,
+          recent: true,
+          new: false,
+        },
+        {
+          previewSrc: "./assets/fogros2_config.jpg",
+          title:
+            "FogROS2-Config: A Toolkit for Choosing Server Configurations for Cloud Robotics",
+          authors: [
+            "Kaiyuan Chen*",
+            "Kush Hari*",
+            "Rohil Khare",
+            "Charlotte Le",
+            "Trinity Chung",
+            "Jaimyn Drake",
+            "Jeffrey Ichnowski",
+            "John Kubiatowicz",
+            "Ken Goldberg",
+          ],
+          conference: "International Conference on Robotics and Automation (ICRA) 2024",
+          links: [
+            { text: "Website", url: "https://sites.google.com/view/fogros2-config" },
+            { text: "Paper", url: "https://arxiv.org/abs/2311.05600" },
+          ],
+          summary:
+            "Open-source toolkit for analyzing cloud computing tradeoffs (latency vs cost) for robotics applications",
+          highlighted: false,
+          recent: true,
+          new: false,
+        },
+        {
+          previewSrc: "./assets/shunt_insertion.png",
+          title:
+            "Robot-assisted vascular shunt insertion with the dvrk surgical robot",
+          authors: [
+            "Karthik Dharmarajan",
+            "Will Panitch",
+            "Baiyu Shi",
+            "Huang Huang",
+            "Lawrence Yunliang Chen",
+            "Masoud Moghani",
+            "Qinxi Yu",
+            "Kush Hari",
+            "Thomas Low",
+            "Danyal Fer",
+            "Animesh Garg",
+            "Ken Goldberg",
+          ],
+          conference: "Journal of Medical Robotics Research (JMRR) 2024",
+          links: [
+            { text: "Website", url: "https://sites.google.com/berkeley.edu/ravsi" },
+            { text: "Paper", url: "https://www.worldscientific.com/doi/abs/10.1142/S2424905X23400068?journalCode=jmrr" },
+          ],
+          summary:
+            "Trimodal (Local, remote, and autonomous) framework for vascular shunt insertion with the da Vinci surgical robot",
+          highlighted: false,
+          recent: false,
+          new: false,
+        },
+        {
+          previewSrc: "./assets/lifelong_lerf.jpg",
+          title:
+            "Lifelong lerf: Local 3d semantic inventory monitoring using fogros2",
+          authors: [
+            "Adam Rashid*",
+            "Chung Min Kim*",
+            "Justin Kerr*",
+            "Letian Fu",
+            "Kush Hari",
+            "Ayah Ahmad",
+            "Kaiyuan Chen",
+            "Huang Huang",
+            "Marcus Gualtieri",
+            "Michael Wang",
+            "Christian Juette",
+            "Nan Tian",
+            "Liu Ren",
+            "Ken Goldberg",
+          ],
+          conference: "International Conference on Robotics and Automation (ICRA) 2024",
+          links: [
+            { text: "Website", url: "https://sites.google.com/berkeley.edu/lifelonglerf/home" },
+            { text: "Paper", url: "https://arxiv.org/abs/2403.10494" },
+          ],
+          summary:
+            "Updating language-embedded 3D feature field over time on a mobile robot",
+          highlighted: false,
+          recent: false,
+          new: false,
+        },
+        {
+          previewSrc: "./assets/neuroart.mp4",
+          title:
+            "Development of a mixed reality application to simulate neurosurgical procedures",
+          authors: [
+            "Kush Hari",
+            "Reid Thompson",
+            "Lola Chambless",
+            "Michael Miga",
+          ],
+          conference: "SPIE Medical Imaging 2023",
+          links: [
+            { text: "Paper", url: "https://www.researchgate.net/profile/Michael-Miga/publication/369786128_Development_of_a_mixed_reality_application_to_simulate_neurosurgical_procedures/links/644baf8297449a0e1a64206a/Development-of-a-mixed-reality-application-to-simulate-neurosurgical-procedures.pdf" },
+            { text: "Code", url: "https://github.com/MigaLab/NeuroART" },
+          ],
+          summary:
+            "Mixed reality application for neurosurgical training that visualizes MRI scans with a Hololens2",
+          highlighted: false,
+          recent: false,
+          new: false,
+        },
+        
+        
+        
         ];
         function generatePaperList() {
           const paperList = document.getElementById("paper-list");
@@ -292,7 +461,7 @@
                     const firstName = names.slice(0, -1).join("&nbsp;");
                     const lastName = names[names.length - 1];
                     const formattedName = `${firstName}&nbsp;${lastName}`;
-                    return author.startsWith("Chung Min Kim")
+                    return author.startsWith("Kush Hari")
                       ? `<strong>${formattedName}</strong>`
                       : formattedName;
                   })
@@ -323,28 +492,11 @@
         }
       </script>
     </section>
-    <section>
-      <h2>Misc</h2>
-      <p> I like sunsets. Every year from Berkeley, in early November, the sun sets over the golden gate:</p>
-      <div style="display: block">
-        <img
-          src="./assets/sunset_small.jpeg"
-          alt="A photo of a sunset over the golden gate, taken by the author"
-          style="
-            width: 13em;
-            height: auto;
-            aspect-ratio: 1.5;
-            object-fit: cover;
-            border-radius: 5%;
-          "
-        />
-      </div>
-    </section>
     <div style="height: 1em"></div>
     <section>
       <em style="color: #777">
         Website design borrows from
-        <a href="https://jonbarron.info/">Jon Barron</a> and
+        <a href="https://jonbarron.info/">Jon Barron</a>, <a href="https://chungmin99.github.io/">Chung Min Kim</a>, and
         <a href="https://brentyi.github.io/">Brent Yi</a>.
       </em>
     </section>
